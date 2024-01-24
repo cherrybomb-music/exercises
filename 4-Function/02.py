@@ -1,12 +1,17 @@
-# 2. Reverso do número. Faça uma função que retorne o reverso de um número inteiro informado. Por exemplo: 127 -> 721.
+# 2. Faça um Programa que peça as quatro notas de 5 alunos, calcule e armazene numa lista a média de cada aluno, imprima o número de alunos com média maior ou igual a 7.0.
 
-def reverso_numero(numero):
+medias_alunos = []
+
+
+for i in range(5):
+    notas = [float(input(f"Digite a nota {j + 1} do aluno {i + 1}: ")) for j in range(4)]
     
-    return int(str(numero)[::-1])
+    
+    media = sum(notas) / len(notas)
+    medias_alunos.append(media)
 
 
-numero_digitado = int(input("Digite um número inteiro: "))
+alunos_aprovados = sum(1 for media in medias_alunos if media >= 7.0)
 
+print(f"Número de alunos com média maior ou igual a 7.0: {alunos_aprovados}")
 
-resultado = reverso_numero(numero_digitado)
-print(f"O reverso do número {numero_digitado} é: {resultado}")
