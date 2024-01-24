@@ -1,11 +1,8 @@
-# 5. Crie uma função chamada contar_vogais que recebe uma string como parâmetro. Implemente a lógica para contar o número de vogais na string e retorne o total de vogais. Solicite ao usuário para inserir uma frase e utilize a função para contar as vogais.
+# 5. Crie duas tuplas. Concatene-as para formar uma nova tupla. 
 
-def contar_vogais(frase):
-    vogais = "aeiouAEIOU"
-    total_vogais = sum(1 for char in frase if char in vogais)
-    return total_vogais
+tupla1 = (1, 2, 3,4,5,6,7,8,9,10)
+tupla2 = ('a', 'b', 'c', 'd', 'e')
 
-frase_usuario = input("Digite uma frase: ")
+nova_tupla = tupla1 + tupla2
 
-resultado = contar_vogais(frase_usuario)
-print(f"O total de vogais na frase é: {resultado}")
+print(nova_tupla)
